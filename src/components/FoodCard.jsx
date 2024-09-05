@@ -34,7 +34,7 @@ const FoodCard = ({ meal, isLoading }) => {
         <h1 className="text-center text-4xl font-bold mb-16 text-gray-700">
           Our Food Menu
         </h1>
-        <div className="relative w-2/4 mx-auto flex p-1 rounded-full bg-white border border-yellow-200 shadow-md md:p-2 mb-20">
+        <div className="relative md:w-2/4 w-full mx-auto flex p-1 rounded-full bg-white border border-yellow-200 shadow-md md:p-2 mb-20">
           <input
             value={searchFood}
             onChange={(e) => setSearchFood(e.target.value)}
@@ -62,7 +62,7 @@ const FoodCard = ({ meal, isLoading }) => {
           </button>
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-10 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-7xl mx-auto">
         {filterFood.length > 0 ? (
           filterFood.map((meals, index) => (
             <div
